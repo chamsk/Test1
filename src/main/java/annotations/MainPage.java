@@ -24,7 +24,6 @@ public class MainPage extends AbstractPage{
     }
 
 
-
     public String getCurrentUser(){
         return txtProfile.getText();
     }

@@ -38,4 +38,9 @@ public class LoginPage extends AbstractPage{
     public void submit(){
         btnSubmit.click();
     }
+
+    public void open(String url){
+        webDriver.get(url);
+    }
+
 }
