@@ -32,9 +32,8 @@ public class MatrixBoardTest2 {
         loginPage.submit();
         MainPage mainPage = new MainPage(webDriver);
         //Assert.assertEquals("admin",mainPage.getCurrentUser());
-        mainPage.submit();
-        CompetenciesPage competenciesPage = new CompetenciesPage(webDriver);
-        Assert.assertEquals("Создать",competenciesPage.getBtnAddSectionText());
+        //CompetenciesPage competenciesPage = new CompetenciesPage(webDriver);
+        //Assert.assertEquals("Создать",competenciesPage.getBtnAddSectionText());
 
 
     }

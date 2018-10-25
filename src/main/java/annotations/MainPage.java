@@ -8,11 +8,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage extends AbstractPage{
-    @FindBy(linkText = "Компетенции")
-    private WebElement btnCompetencies;
+    @FindBy(xpath = "//a[contains(@href, 'index.jsp')]")
+    private WebElement btnPeople;
 
     @FindBy(id="profile")
     private WebElement txtProfile;
+
+    @FindBy (id = "add-person")
+    private WebElement btnAddPerson;
+
+    @FindBy (id = "person-last-name")
+    private WebElement txtLastName;
+
+    @FindBy (id = "person-first-name")
+    private WebElement txtFirstName;
+
+    @FindBy (id = "person-patronymic-name")
+    private WebElement txtpatronymicName;
+
+
 
     private WebDriver webDriver = null;
    // private WebDriverWait driverWait = null;
@@ -28,8 +42,19 @@ public class MainPage extends AbstractPage{
         return txtProfile.getText();
     }
 
-    public void submit() {
-       // btnCompetencies = webDriver.findElement(By.linkText("Компетенции"));
-        btnCompetencies.click();
+    public void addPeroson() {
+        btnAddPerson.click();
+    }
+
+    public void fillLastName(String s){
+        txtLastName.sendKeys(s);
+    }
+
+    public void fillFirstName(String s){
+        txtFirstName.sendKeys(s);
+    }
+
+    public void fillPatronymicName(String s){
+        txtpatronymicName.sendKeys(s);
     }
 }
